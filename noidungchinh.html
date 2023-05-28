@@ -1,0 +1,57 @@
+<ul class="nav nav-pills mb-3 justify-content-center m-2" id="pills-tab" role="tablist">
+
+    <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="pills-Programming-tab" data-bs-toggle="pill"
+            data-bs-target="#pills-Programming" type="button" role="tab" aria-controls="pills-Programming"
+            aria-selected="false">Ngôn ngữ máy</button>
+    </li>
+    <li class="nav-item" role="presentation">
+        <button class="nav-link " id="pills-CSDL-tab" data-bs-toggle="pill" data-bs-target="#pills-CSDL" type="button"
+            role="tab" aria-controls="pills-CSDL" aria-selected="true">CSDL</button>
+    </li>
+    <li class="nav-item" role="presentation">
+        <button class="nav-link" id="pills-kynang -tab" data-bs-toggle="pill" data-bs-target="#pills-kynang "
+            type="button" role="tab" aria-controls="pills-kynang" aria-selected="false">Kỹ năng </button>
+    </li>
+</ul>
+<div class="tab-content" id="pills-tabContent">
+    <div class="tab-pane fade show active" id="pills-Programming" role="tabpanel"
+        aria-labelledby="pills-Programming-tab" tabindex="0">
+        <div class="row p-2">
+            <div class="col-6 col-lg-4 col-sm-12 mt-4  d-grid " ng-repeat="mh in cacmonhoc| filter:'nn'">
+                <div class="shadow-box">
+                    <span class="badge text-bg-primary float-end p-2 m-2">180+</span>
+                    <div class="img hvr-bob"><img src="/img/logos/{{mh.Logo}}" alt=" "></div>
+                    <h3 class="text-center">{{mh.Name}}</h3>
+                    <a href="#!tracnghiem/{{mh.Id}}/{{mh.Name}}"class="btn btn-danger px-5 m-2 hvr-round-corners">Bắt
+                        đầu</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tab-pane fade" id="pills-CSDL" role="tabpanel" aria-labelledby="pills-CSDL-tab" tabindex="0">
+        <div class="row">
+            <div class="col-6 col-lg-4 col-sm-12 mt-4 d-grid" ng-repeat="mh in cacmonhoc| filter:'csdl'">
+                <div class="shadow-box">
+                    <span class="badge text-bg-primary float-end p-2 m-2">180+</span>
+                    <div class="img hvr-bob"><img src="/img/logos/{{mh.Logo}}" alt=" "></div>
+                    <h3 class="text-center">{{mh.Name}}</h3>
+                    <a href="#!tracnghiem/{{mh.Id}}/{{mh.Name}}" class="btn btn-danger px-5 m-2 hvr-round-corners">Bắt đầu</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tab-pane fade" id="pills-kynang" role="tabpanel" aria-labelledby="pills-kynang-tab" tabindex="0">
+        <div class="row">
+            <div class="col-6 col-lg-4 col-sm-12 mt-4 d-grid" ng-repeat="mh in cacmonhoc| filter:'kynang'">
+                <div class="shadow-box">
+                    <span class="badge text-bg-primary float-end p-2 m-2">180+</span>
+                    <div class="img hvr-bob"><img src="/img/logos/{{mh.Logo}}" alt=" "></div>
+                    <h3 class="text-center">{{mh.Name}}</h3>
+                    <a href="#!tracnghiem/{{mh.Id}}/{{mh.Name}}" class="btn btn-danger px-5 m-2 hvr-round-corners">Bắt đầu</a>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>

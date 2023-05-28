@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://code.angularjs.org/1.8.0/angular-route.min.js"></script>
+    <link href="bootstrap-5.3.0-alpha1-dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="Hover-master/Hover-master/css/hover-min.css">
+    <title>Document</title>
+    <style>
+        .login {
+            min-height: 100vh;
+        }
+
+        .bg-image {
+            background-image: url('/img/anhtrangphu/login.jfif');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .login-heading {
+            font-weight: 300;
+        }
+
+        .btn-login {
+            font-size: 0.9rem;
+            letter-spacing: 0.05rem;
+            padding: 0.75rem 1rem;
+        }
+    </style>
+</head>
+
+<body ng-app="dangnhap">
+
+    <div ng-controller="frmdn">
+        <div class="container-fluid ps-md-0">
+            <div class="row g-0">
+                <div class="d-none d-md-flex col-md-4 col-lg-6 bg-image"></div>
+                <div class="col-md-8 col-lg-6">
+                    <div class="login d-flex align-items-center py-5">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-9 col-lg-8 mx-auto">
+                                    <h3 class="login-heading mb-4">Chào mừng</h3>
+
+                                    <!-- Sign In Form -->
+                                    <form>
+                                        <div class="form-floating mb-3">
+                                            <input type="text" class="form-control" id="floatingacc" ng-model="taikhoan"
+                                                ng-bind="tk" placeholder="taikhoan">
+                                            <label for="floatingacc">Tài khoản</label>
+                                        </div>
+                                        <div class="form-floating mb-3">
+                                            <input type="text" class="form-control" id="floatingpass" ng-model="matkhau"
+                                                placeholder="matkhau">
+                                            <label for="floatingpass">Mật khẩu</label>
+                                        </div>
+                                        <div class="form-floating mb-3">
+                                            <input type="checkbox" id="checkghinho"> Ghi nhớ
+                                        </div>
+                                        <div class="d-grid">
+                                            <button
+                                                class="btn btn-lg btn-primary btn-login text-uppercase fw-bold mb-2 hvr-grow-shadow"
+                                                type="button" ng-click="dangnhap()">Đăng nhập</button>
+                                        </div>
+
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+<script>
+    var app = angular.module("dangnhap", []);
+    app.controller("frmdn", myfunc);
+    var check = false;
+    function myfunc($scope) {
+        $scope.taikhoan = localStorage.getItem("username");
+        $scope.matkhau = localStorage.getItem("password");
+        $scope.dangnhap = function () {
+            var taikhoan = $scope.taikhoan;
+            var matkhau = $scope.matkhau;
+            var sv;
+            for (let index = 0; index < listsv.length; index++) {
+                sv = listsv[index];
+                if (taikhoan == sv.username && matkhau == sv.password) {
+                    check = true;
+                    break;
+                }
+            }
+            document.getElementById('checkghinho').onclick = function (e) {
+                if (check) {
+                    localStorage.setItem("username", taikhoan);
+                    localStorage.setItem("password", matkhau);
+                }
+            };
+            if (check) {
+                localStorage.setItem("username", taikhoan);
+                localStorage.setItem("password", matkhau);
+                sessionStorage.setItem("username", sv.username);
+                sessionStorage.setItem("hoten", sv.fullname);
+                sessionStorage.setItem("email", sv.email);
+                sessionStorage.setItem("ngaysinh", sv.birthday);
+                sessionStorage.setItem("gioitinh", sv.gender);
+                sessionStorage.setItem("anh", sv.img);
+                document.location = "trangcanhan.html";
+            }
+
+        }
+
+    }
+</script>
+<script src="/db/Students.js"></script>
+
+</html>

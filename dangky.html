@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/bootstrap-5.3.0-alpha1-dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="Hover-master/Hover-master/css/hover-min.css">
+    <title>Document</title>
+    <style>
+        body {
+            background: #007bff;
+            background: linear-gradient(to right, #0062E6, #33AEFF);
+        }
+
+        .card-img-left {
+            width: 45%;
+            /* Link to your background image using in the property below! */
+            background: scroll center url('img/anhtrangphu/login.jfif');
+            background-size: cover;
+        }
+
+        .btn-login {
+            font-size: 0.9rem;
+            letter-spacing: 0.05rem;
+            padding: 0.75rem 1rem;
+        }
+
+        .btn-google {
+            color: white !important;
+            background-color: #ea4335;
+        }
+
+        .btn-facebook {
+            color: white !important;
+            background-color: #3b5998;
+        }
+    </style>
+</head>
+
+<body ng-app="dangky">
+    <div class="container" ng-controller="frmdk">
+        <div class="row">
+            <div class="col-lg-10 col-xl-9 mx-auto">
+                <div class="card flex-row my-5 border-0 shadow rounded-3 overflow-hidden">
+                    <div class="card-img-left d-none d-md-flex animate__animated animate__fadeInTopLeft">
+                        <!-- Background image for card set in CSS! -->
+                    </div>
+                    <div class="card-body p-4 p-sm-5">
+                        <h5 class="card-title text-center mb-5 fw-light fs-5">Đăng kí tài khoản</h5>
+                        <form>
+
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="floatingInputUsername"
+                                    placeholder="myusername" required autofocus ng-model="student.username">
+                                <label for="floatingInputUsername">Tài Khoản</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="floatingInputUsername"
+                                    placeholder="myusername" required autofocus ng-model="student.fullname">
+                                <label for="floatingInputUsername">Họ và tên</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input type="email" class="form-control" id="floatingInputEmail"
+                                    placeholder="name@example.com" ng-model="student.email">
+                                <label for="floatingInputEmail">Email</label>
+                            </div>
+
+                            <div class="form-floating mb-3">
+                                <input type="radio" class="m-1" name="gioitinh" ng-model="student.gender">Nam
+                                <input type="radio" class="m-1" name="gioitinh"ng-model="student.gender">Nữ
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input type="date" class="form-control" id="floatingInputEmail"
+                                    placeholder="name@example.com" ng-model="student.birthday">
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input type="password" class="form-control" id="floatingPassword"
+                                    placeholder="Password" ng-model="student.password">
+                                <label for="floatingPassword">Mật khẩu</label>
+                            </div>
+
+                            <div class="form-floating mb-3">
+                                <input type="password" class="form-control" id="floatingPasswordConfirm"
+                                    placeholder="Confirm Password">
+                                <label for="floatingPasswordConfirm">Nhập lại mật khẩu</label>
+                            </div>
+
+                            <div class="d-grid mb-2">
+                                <button class="btn btn-lg btn-primary btn-login fw-bold text-uppercase hvr-grow-shadow"
+                                    type="submit" ng-click="dangki()">Đăng kí</button>
+                            </div>
+
+                            <a class="d-block text-center mt-2 small" href="dangnhap.html">Đã có tài khoản? Đăng nhập</a>
+
+                            <hr class="my-4">
+
+                            <div class="d-grid mb-2">
+                                <button class="btn btn-lg bg-danger btn-login fw-bold text-uppercase hvr-shrink text-white" type="submit">
+                                    <i class="fab fa-google me-2"></i> Đăng kí với Google
+                                </button>
+                            </div>
+
+                            <div class="d-grid">
+                                <button class="btn btn-lg bg-primary btn-login fw-bold text-uppercase hvr-shrink text-white" type="submit">
+                                    <i class="fab fa-facebook-f me-2"></i> Đăng kí với Facebook
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="/db/Students.js"></script>
+<script>
+    var app = angular.module("dangky", []);
+    app.controller("frmdk", myfunc);
+    function myfunc($scope) {
+        $scope.$parent.students=[];
+        $scope.student={};
+        $scope.dangki = function () {
+            $scope.students.push(angular.copy($scope.student));
+            $scope.clear();
+            console.log(student)
+        }
+
+    }
+</script>
+</html>

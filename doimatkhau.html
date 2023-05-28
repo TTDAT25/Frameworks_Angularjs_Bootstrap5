@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/bootstrap-5.3.0-alpha1-dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="Hover-master/Hover-master/css/hover-min.css">
+    <title>Document</title>
+    <style>
+        .login {
+            min-height: 100vh;
+        }
+
+        .bg-image {
+            background-image: url('/img/anhtrangphu/login.jfif');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .login-heading {
+            font-weight: 300;
+        }
+
+        .btn-login {
+            font-size: 0.9rem;
+            letter-spacing: 0.05rem;
+            padding: 0.75rem 1rem;
+        }
+          footer .footer-nav h4 a {
+            color: #fc0;
+            font-family: "Nunito", sans-serif;
+            font-size: 13px;
+            line-height: 1.38;
+            font-weight: 700;
+            margin-bottom: 13px;
+            text-transform: uppercase;
+        }
+
+        footer .footer-nav a {
+            text-decoration: none;
+            color: blue;
+            font-family: "Nunito", sans-serif;
+            font-size: 13px;
+            line-height: 2.62;
+            font-weight: 400;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <header class="row">
+        <!-- <img src="/img/logos/banner.png" alt=""
+            class="col-12 animate__animated animate__slideInDown animate__delay-1s" style="height: 450px;"> -->
+    </header>
+    <nav class="row">
+
+        <nav class="navbar navbar-expand-lg nav-tabs fixed-top bg-white fw-bold">
+            <div class="container-fluid">
+                <!-- <img src="/img/logos/logoweb.png" alt="" style="width: 80px;"> -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link " aria-current="page" href="index.html">Trang chủ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="lienhe.html">Liên hệ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="tranggioithieu.html">Giới thiệu</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Tài Khoản
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="dangky.html">Đăng ký</a></li>
+                                <li><a class="dropdown-item" href="#">Đổi mật khẩu</a></li>
+                                <li><a class="dropdown-item" href="#">Hồ sơ cá nhân</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Hỏi đáp thắc mắc</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <a class="btn btn-outline-primary  border rounded-5" type="submit" href="dangnhap.html"><i
+                            class="bi bi-person-circle"></i> Đăng nhập</a>
+                </div>
+            </div>
+        </nav>
+    </nav>
+    <article>
+        <div class="container-fluid ps-md-0">
+            <div class="row g-0">
+                <div class="d-none d-md-flex col-md-4 col-lg-6 bg-image animate__animated animate__fadeInTopLeft"></div>
+                <div class="col-md-8 col-lg-6">
+                    <div class="login d-flex align-items-center py-5">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-9 col-lg-8 mx-auto">
+                                    <h3 class="login-heading mb-4 text-center">Đổi mật khẩu</h3>
+    
+                                    <!-- Sign In Form -->
+                                    <form>
+                                        <div class="form-floating mb-3">
+                                            <input type="password" class="form-control" id="floatingPassword"
+                                                placeholder="Password">
+                                            <label for="floatingPassword">Nhập mật khẩu cũ</label>
+                                        </div>
+                                        <div class="form-floating mb-3">
+                                            <input type="password" class="form-control" id="floatingPassword"
+                                                placeholder="Password">
+                                            <label for="floatingPassword">Nhập mật khẩu mới</label>
+                                        </div>
+    
+                                        <div class="d-grid">
+                                            <button class="btn btn-lg btn-primary btn-login text-uppercase fw-bold mb-2 hvr-grow-shadow"
+                                                type="submit">Đổi mật khẩu</button>
+                                            <div class="text-center">
+                                                <a class="small" href="#">Quên mật khẩu?</a>
+                                            </div>
+                                        </div>
+    
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+    <footer class="bg-white">
+        <div class="footer-logo text-center">
+            <img src="/img/logos/logoweb.png" style="width: 150px;" alt="Trắc Nghiệm Online">
+            <hr>
+        </div>
+        <div class="container">
+            <div class="footer-nav">
+                <div class="row">
+                    <div class="col-6 col-lg-3 col-sm-6">
+                        <h4><a href="#">Ngôn ngữ</a></h4>
+                        <a href="#">Python</a>
+                        <a href="#">C++</a>
+                        <a href="#">Java</a>
+                        <a href="#">Javascript</a>
+                    </div>
+                    <div class="col-6 col-lg-3 col-sm-6">
+                        <h4><a href="#">Khóa học giới thiệu</a></h4>
+                        <a href="#">Giới thiệu về C++</a>
+                        <a href="#">Giới thiệu về Python</a>
+                        <a href="#">Giới thiệu về Java</a>
+                        <a href="#">Giới thiệu về Javascript</a>
+                    </div>
+                    <div class="col-6 col-lg-3 col-sm-6">
+                        <h4><a href="#">Khóa học trung cấp</a></h4>
+                        <a href="#">Lập trình anddroid nâng cao</a>
+                        <a href="#">Xây dựng trang web</a>
+                        <a href="#">SQL Server</a>
+                        <a href="#">Lập trình hướng đối tượng Java</a>
+                    </div>
+                    <div class="col-6 col-lg-3 col-sm-6">
+                        <h4><a href="#">Kiểm tra online</a></h4>
+                        <a href="#">Lập trình anddroid nâng cao</a>
+                        <a href="#">Xây dựng trang web</a>
+                        <a href="#">SQL Server</a>
+                        <a href="#">Lập trình hướng đối tượng Java</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+</body>
+</html>

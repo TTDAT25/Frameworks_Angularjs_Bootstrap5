@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/bootstrap-5.3.0-alpha1-dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="Hover-master/Hover-master/css/hover-min.css">
+    <title>Document</title>
+    <style>
+        footer .footer-nav h4 a {
+            color: #fc0;
+            font-family: "Nunito", sans-serif;
+            font-size: 13px;
+            line-height: 1.38;
+            font-weight: 700;
+            margin-bottom: 13px;
+            text-transform: uppercase;
+        }
+
+        footer .footer-nav a {
+            text-decoration: none;
+            color: blue;
+            font-family: "Nunito", sans-serif;
+            font-size: 13px;
+            line-height: 2.62;
+            font-weight: 400;
+            display: block;
+        }
+
+        .carousel-item {
+            height: 65vh;
+            min-height: 350px;
+            background: no-repeat center center scroll;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="row">
+        <nav class="navbar navbar-expand-lg nav-tabs fixed-top bg-white fw-bold">
+            <div class="container-fluid">
+                <!-- <img src="/img/logos/logoweb.png" alt="" style="width: 80px;"> -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link " aria-current="page" href="index.html">Trang chủ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="lienhe.html">Liên hệ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">Giới thiệu</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Tài Khoản
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="dangky.html">Đăng ký</a></li>
+                                <li><a class="dropdown-item" href="doimatkhau.html">Đổi mật khẩu</a></li>
+                                <li><a class="dropdown-item" href="#">Hồ sơ cá nhân</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <a class="btn btn-outline-primary  border rounded-5" type="submit" href="dangnhap.html"><i
+                            class="bi bi-person-circle"></i> Đăng nhập</a>
+                </div>
+            </div>
+        </nav>
+    </nav>
+    <header>
+
+        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner carousel-dark">
+                <div class="carousel-item active" style="background-image: url('/img/anhtrangphu/lession1.jpg')">
+                    <div class="carousel-caption text-dark">
+                        <h5>Đa dạng nội dung</h5>
+                        <p>Cung cấp đa dạng nội dung các câu hỏi trắc nghiệm thuộc nhiều lĩnh vực khác nhau</p>
+                    </div>
+                </div>
+                <div class="carousel-item" style="background-image: url('')">
+                    <div class="carousel-caption">
+                        <h5>Những nội dung chính trên trang EOW</h5>
+                        <p>
+
+                            Học tập: Tài liệu hướng dẫn và giải bài tập, giải sách giáo khoa, các tài liệu nâng cao và
+                            tham khảo trong chương trình học từ mầm non đến chương trình Đại học như bài tập nâng cao,
+                            các giáo án, bài giảng, tài liệu các chuyên đề học tập các cấp,....
+
+                            Tài liệu: Cung cấp các tài liệu tham khảo rộng khắp từ Công nghệ thông tin, Photoshop đến
+                            các bài văn khấn, kinh sám hối, các món ăn ngon, các bí quyết chăm sóc làm đẹp, dưỡng da từ
+                            cơ bản đến chuyên sâu gửi tới bạn đọc tham khảo.
+
+                            Trắc nghiệm: Bao gồm các bài trắc nghiệm học tập các môn, trắc nghiệm IQ, EQ, bài thi
+                            Violympic và IOE các lớp, trắc nghiệm ôn thi vào lớp 6, lớp 10 và THPT Quốc gia đơn giản và
+                            dễ thao tác nhất,.....</p>
+                    </div>
+                </div>
+                <div class="carousel-item" style="background-image: url('')">
+                    <div class="carousel-caption">
+                        <h5>Điều khoản sử dụng</h5>
+                        <p>1. Bằng việc truy cập hay sử dụng dịch vụ của chúng tôi, bạn xác nhận rằng bạn đồng ý bị ràng buộc bởi Điều khoản Dịch vụ này. Bạn cũng xác nhận rằng bạn ít nhất 14 tuổi hoặc nếu bạn dưới 14 tuổi, bạn có sự cho phép của cha mẹ hoặc người giám hộ hợp pháp, những người này sẽ chịu trách nhiệm về việc tuân thủ Điều khoản Dịch vụ này của bạn.
+
+                            2. Các điều khoản này có thể được chúng tôi cập nhật. Bạn có thể xem bản mới nhất của Điều khoản Dịch vụ bất kỳ lúc nào tại đây. Việc bạn tiếp tục sử dụng Dịch vụ sau khi chúng tôi có bất kỳ thay đổi trong Điều khoản Dịch vụ thể hiện sự chấp nhận Điều khoản Dịch vụ mới của bạn.
+                            
+                            3. Bạn có thể chấm dứt việc sử dụng Dịch vụ của chúng tôi nếu bạn không đồng ý tuân thủ các Điều khoản Dịch vụ này hoặc bất kỳ Điều khoản Dịch vụ nào trong tương lai do chúng tôi quy định.</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </header>
+
+</body>
+
+</html>
